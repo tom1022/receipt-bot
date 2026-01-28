@@ -1,0 +1,9 @@
+selenium>=4.10.0
+requests
+opencv-python-headless
+pillow
+paddleocr
+discord.py>=2.3.0
+gspread
+google-api-python-client
+google-auth

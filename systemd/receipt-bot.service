@@ -1,0 +1,24 @@
+[Unit]
+Description=Receipt Bot Discord Service
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+WorkingDirectory=/opt/receipt-bot
+EnvironmentFile=/etc/receipt-bot.env
+ExecStart=/opt/receipt-bot/venv/bin/python -u bot.py
+Restart=always
+RestartSec=5
+User=root
+Group=root
+
+# Hardening
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=full
+ProtectHome=true
+ReadWritePaths=/opt/receipt-bot
+
+[Install]
+WantedBy=multi-user.target
