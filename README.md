@@ -71,3 +71,7 @@ sudo systemctl enable --now receipt-bot.service
 
 ## データ
 - `wikipedia_data/` - 参照用の抽出済みデータ
+
+## ライセンス
+MIT License
+`wikipedia_data/` におけるWikipediaのデータは [Creative Commons Attribution-ShareAlike License](https://creativecommons.org/licenses/by-sa/4.0/) に準拠します。
