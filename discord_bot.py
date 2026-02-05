@@ -302,7 +302,8 @@ async def on_message(message):
     if message.author == client.user:
         return
 
-    if message.channel.id != TARGET_CHANNEL_ID:
+    # If a target channel is configured, ignore messages from other channels.
+    if TARGET_CHANNEL_ID and message.channel.id != TARGET_CHANNEL_ID:
         return
 
     if message.attachments:
